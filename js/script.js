@@ -89,7 +89,7 @@ dopo.addEventListener('click', function () {
 
     // incremento activindex 
     activeIndex++;
-    immagini
+
 
     //rimuovo la classe item
     immagini[activeIndex].classList.add('item.active')
