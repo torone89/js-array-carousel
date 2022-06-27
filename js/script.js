@@ -81,9 +81,9 @@ dopo.addEventListener('click', function () {
     activeIndex++;
 
     // RIPARTO DA 0 quando arrivo in fondo alle immagini
-    if (activeIndex < immagini.length - 1) {
-        activeIndex++;
-    } else {
+    if (activeIndex > immagini.length - 1) {
+
+
         activeIndex = 0;
     }
 
@@ -95,7 +95,7 @@ dopo.addEventListener('click', function () {
 
 })
 
-// BONUS 1
+
 // BONUS 1:
 // Aggiungere il ciclo infinito del carosello. Ovvero se l' immagine attiva è la prima 
 // e l'utente clicca la freccia per andare indietro, la miniatura che deve attivarsi sarà l'ultima e viceversa per l'ultima miniatura s
@@ -109,9 +109,9 @@ prima.addEventListener('click', function () {
 
 
     // RIPARTO DA 0 quando arrivo in fondo alle immagini
-    if (!activeIndex == 0) {
-        activeIndex--;
-    } else {
+    activeIndex--
+
+    if (activeIndex < 0) {
         activeIndex = immagini.length - 1;
     }
     // aggiungo la classe active
