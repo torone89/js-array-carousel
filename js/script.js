@@ -60,9 +60,12 @@ for (let i = 0; i < immagini.length; i++) {
 
 
 }
+
 document.getElementsByClassName('item')[activeIndex].classList.add('active');
 
-console.log(immagini[activeIndex])
+
+
+// Aggiungo i bottoni 
 
 
 
@@ -71,3 +74,25 @@ console.log(activeIndex)
 
 // MILESTONE 3
 // Al click dell'utente sulle frecce, l'immagine attiva cambia e diventa visibile nello slider, prendendo il posto della precedente.
+
+// Aggiungo i bottoni 
+
+const prima = document.getElementById('prima');
+const dopo = document.getElementById('dopo');
+console.log(prima, dopo)
+
+// Aggiungo la listener al button
+
+dopo.addEventListener('click', function () {
+    //aggiungo la classe item
+    immagini[activeIndex].classList.add('item')
+
+    // incremento activindex 
+    activeIndex++;
+    immagini
+
+    //rimuovo la classe item
+    immagini[activeIndex].classList.add('item.active')
+
+})
+
