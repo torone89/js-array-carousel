@@ -56,7 +56,7 @@ for (let i = 0; i < immagini.length; i++) {
 
 
     contenitore.innerHTML += `
-          <img class="item" src="${immagini[i]}" alt="immagine-${activeIndex}">`
+          <img class="item" src="${immagini[i]}" alt="immagine-${i}">`
 
 
 }
@@ -84,15 +84,20 @@ console.log(prima, dopo)
 // Aggiungo la listener al button
 
 dopo.addEventListener('click', function () {
-    //aggiungo la classe item
-    immagini[activeIndex].classList.add('item')
+    //rimuovo la classe active
+    document.querySelector(".active").classList.remove("active")
 
     // incremento activindex 
     activeIndex++;
 
+    // RIPARTO DA 0 quando arrivo in fondo alle immagini
+    if (activeIndex === immagini.length) { activeIndex = 0 }
 
-    //rimuovo la classe item
-    immagini[activeIndex].classList.add('item.active')
+
+    // aggiungo la classe active
+    document.getElementsByClassName('item')[activeIndex].classList.add('active');
+
+
 
 })
 
