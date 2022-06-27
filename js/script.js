@@ -25,16 +25,6 @@ console.log("JS")
 //   ma costruito dinamicamente attraverso
 
 
-// MILESTONE 3
-// Al click dell'utente sulle frecce, l'immagine attiva cambia e diventa visibile nello slider, prendendo il posto della precedente.
-
-// MILESTONE 2
-// Adesso rimuoviamo tutto il markup statico e inseriamo le immagini dinamicamente servendoci dell'array fornito 
-// e un semplice ciclo for. Possiamo concatenare una stringa con un template literal oppure utilizzare gli altri
-//  metodi di manipolazione del DOM che abbiamo visto insieme. Al termine di questa fase ci ritroveremo con lo stesso slider,
-//   ma costruito dinamicamente attraverso
-
-
 
 // Mi recupero tutte le immagini per l'array
 
@@ -91,7 +81,11 @@ dopo.addEventListener('click', function () {
     activeIndex++;
 
     // RIPARTO DA 0 quando arrivo in fondo alle immagini
-    if (activeIndex === immagini.length) { activeIndex = 0 }
+    if (activeIndex < immagini.length - 1) {
+        activeIndex++;
+    } else {
+        activeIndex = 0;
+    }
 
 
     // aggiungo la classe active
@@ -101,6 +95,31 @@ dopo.addEventListener('click', function () {
 
 })
 
+// BONUS 1
+// BONUS 1:
+// Aggiungere il ciclo infinito del carosello. Ovvero se l' immagine attiva è la prima 
+// e l'utente clicca la freccia per andare indietro, la miniatura che deve attivarsi sarà l'ultima e viceversa per l'ultima miniatura s
+// e l'utente clicca la freccia verso avanti, deve attivarsi la prima immgine.
+
+
+
+prima.addEventListener('click', function () {
+    //rimuovo la classe active
+    document.querySelector(".active").classList.remove('active')
+
+
+    // RIPARTO DA 0 quando arrivo in fondo alle immagini
+    if (!activeIndex == 0) {
+        activeIndex--;
+    } else {
+        activeIndex = immagini.length - 1;
+    }
+    // aggiungo la classe active
+    document.getElementsByClassName('item')[activeIndex].classList.add('active');
+
+
+
+})
 
 
 
