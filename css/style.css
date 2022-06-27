@@ -3,20 +3,6 @@
 /* *************************/
 
 
-.row {
-    border: 2px dashed yellow;
-}
-
-.row>[class^='col'] {
-    min-height: 100px;
-    background-color: blanchedalmond;
-    border: 1px gray solid;
-}
-
-.row .row>[class^='col'] {
-    background-color: orange;
-
-}
 
 
 /* *************************/
@@ -31,22 +17,54 @@
 /* *************************/
 #carousel {
     margin: 40px auto;
-    width: 800px;
+    width: 1000px;
     height: 400px;
+    position: relative;
 }
 
 #carousel .galleria {
     height: 100%;
+
 }
 
-#carousel .galleria img {
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
+
+}
+
+/* #carousel .galleria .active {
+    display: block;
+} */
+
+
+.item.active {
+    display: block;
+}
+
+.item {
     display: none;
 }
 
-#carousel .galleria .active {
-    display: block;
+.bi {
+    position: absolute;
+    font-size: 2rem;
+    top: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+#prima {
+    right: 102%;
+}
+
+#dopo {
+    left: 102%;
+}
+
+.bi:hover {
+
+    color: grey
 }
