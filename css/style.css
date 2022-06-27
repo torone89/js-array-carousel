@@ -2,11 +2,6 @@
 /* GENERIC */
 /* *************************/
 
-.container {
-    background-color: aqua;
-    height: 800px;
-
-}
 
 .row {
     border: 2px dashed yellow;
@@ -34,3 +29,24 @@
 /* *************************/
 /* Main */
 /* *************************/
+#carousel {
+    margin: 40px auto;
+    width: 800px;
+    height: 400px;
+}
+
+#carousel .galleria {
+    height: 100%;
+}
+
+#carousel .galleria img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: none;
+}
+
+#carousel .galleria .active {
+    display: block;
+}
