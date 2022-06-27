@@ -85,7 +85,7 @@ console.log(prima, dopo)
 
 dopo.addEventListener('click', function () {
     //rimuovo la classe active
-    document.querySelector(".active").classList.remove("active")
+    document.querySelector(".active").classList.remove('active')
 
     // incremento activindex 
     activeIndex++;
@@ -100,4 +100,8 @@ dopo.addEventListener('click', function () {
 
 
 })
+
+
+
+
 

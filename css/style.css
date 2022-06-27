@@ -17,23 +17,17 @@
 /* *************************/
 #carousel {
     margin: 40px auto;
-    width: 1000px;
-    height: 400px;
+    width: 700px;
+    max-height: 300px;
     position: relative;
 }
 
-#carousel .galleria {
-    height: 100%;
+.galleria {
+    max-height: 300px;
 
 }
 
-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
 
-}
 
 /* #carousel .galleria .active {
     display: block;
@@ -42,17 +36,26 @@ img {
 
 .item.active {
     display: block;
+    height: 300px;
+
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .item {
     display: none;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .bi {
     position: absolute;
     font-size: 2rem;
     top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
     cursor: pointer;
 }
 
