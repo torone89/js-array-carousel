@@ -43,23 +43,11 @@ let activeIndex = 0
 for (let i = 0; i < immagini.length; i++) {
 
 
-
-
     contenitore.innerHTML += `
           <img class="item" src="${immagini[i]}" alt="immagine-${i}">`
-
-
 }
 
 document.getElementsByClassName('item')[activeIndex].classList.add('active');
-
-
-
-// Aggiungo i bottoni 
-
-
-
-console.log(activeIndex)
 
 
 // MILESTONE 3
@@ -87,20 +75,14 @@ dopo.addEventListener('click', function () {
         activeIndex = 0;
     }
 
-
     // aggiungo la classe active
     document.getElementsByClassName('item')[activeIndex].classList.add('active');
-
-
-
 })
-
 
 // BONUS 1:
 // Aggiungere il ciclo infinito del carosello. Ovvero se l' immagine attiva è la prima 
 // e l'utente clicca la freccia per andare indietro, la miniatura che deve attivarsi sarà l'ultima e viceversa per l'ultima miniatura s
 // e l'utente clicca la freccia verso avanti, deve attivarsi la prima immgine.
-
 
 
 prima.addEventListener('click', function () {
@@ -114,11 +96,9 @@ prima.addEventListener('click', function () {
     if (activeIndex < 0) {
         activeIndex = immagini.length - 1;
     }
+
     // aggiungo la classe active
     document.getElementsByClassName('item')[activeIndex].classList.add('active');
-
-
-
 })
 
 

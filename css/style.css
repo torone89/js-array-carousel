@@ -1,18 +1,4 @@
 /* *************************/
-/* GENERIC */
-/* *************************/
-
-
-
-
-/* *************************/
-/* UTILITIES */
-/* *************************/
-
-
-
-
-/* *************************/
 /* Main */
 /* *************************/
 #carousel {
@@ -26,13 +12,6 @@
     max-height: 300px;
 
 }
-
-
-
-/* #carousel .galleria .active {
-    display: block;
-} */
-
 
 .item.active {
     display: block;
@@ -70,4 +49,23 @@
 .bi:hover {
 
     color: grey
+}
+
+
+/* THUMB */
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    width: calc(100% / 4);
+    height: 200px;
+    background-color: aqua;
+
+    flex-wrap: nowrap;
+    border: 1px solid black;
 }
