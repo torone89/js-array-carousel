@@ -28,8 +28,8 @@ console.log("JS")
 
 // Mi recupero tutte le immagini per l'array
 
-const immagini = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg", "img/06.jpg"]
-console.log(immagini)
+const sources = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg", "img/06.jpg"]
+console.log(sources)
 
 //  recupero la galleria dove mettere le immmagini
 
@@ -40,11 +40,11 @@ console.log(contenitore)
 let activeIndex = 0
 
 
-for (let i = 0; i < immagini.length; i++) {
+for (let i = 0; i < sources.length; i++) {
 
 
     contenitore.innerHTML += `
-          <img class="item" src="${immagini[i]}" alt="immagine-${i}">`
+          <img class="item" src="${sources[i]}" alt="immagine-${i}">`
 }
 
 document.getElementsByClassName('item')[activeIndex].classList.add('active');
@@ -69,7 +69,7 @@ dopo.addEventListener('click', function () {
     activeIndex++;
 
     // RIPARTO DA 0 quando arrivo in fondo alle immagini
-    if (activeIndex > immagini.length - 1) {
+    if (activeIndex > sources.length - 1) {
 
 
         activeIndex = 0;
@@ -94,7 +94,7 @@ prima.addEventListener('click', function () {
     activeIndex--
 
     if (activeIndex < 0) {
-        activeIndex = immagini.length - 1;
+        activeIndex = sources.length - 1;
     }
 
     // aggiungo la classe active
