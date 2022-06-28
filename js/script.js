@@ -28,13 +28,16 @@ console.log("JS")
 
 // Mi recupero tutte le immagini per l'array
 
-const sources = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg", "img/06.jpg"]
+const sources = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"]
+
 console.log(sources)
 
 //  recupero la galleria dove mettere le immmagini
 
 const contenitore = document.getElementById("galleria")
 console.log(contenitore)
+
+const thumbnails = document.getElementById("thumb")
 
 // // Variabile per le immagini attive
 let activeIndex = 0
@@ -43,8 +46,12 @@ let activeIndex = 0
 for (let i = 0; i < sources.length; i++) {
 
 
-    contenitore.innerHTML += `
-          <img class="item" src="${sources[i]}" alt="immagine-${i}">`
+    contenitore.innerHTML += `<img class="item" src="${sources[i]}" alt="immagine-${i}">`
+
+    thumbnails.innerHTML += `<img src="${sources[i]}" alt="immagine-${i}">`
+
+
+
 }
 
 document.getElementsByClassName('item')[activeIndex].classList.add('active');
