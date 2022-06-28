@@ -69,10 +69,10 @@
     width: 19%;
     height: 100px;
     border-radius: 20px;
-    filter: grayscale(0);
+    filter: grayscale(1);
 }
 
-#thumb img.item.active {
+#thumb img.scaleactive {
     filter: grayscale(0);
-    box-shadow: 0 0 5 darkblue;
+    box-shadow: 1px 1px 5px darkblue;
 }

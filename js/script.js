@@ -48,17 +48,20 @@ for (let i = 0; i < sources.length; i++) {
 
     contenitore.innerHTML += `<img class="item" src="${sources[i]}" alt="immagine-${i}">`
 
-    thumbnails.innerHTML += `<img src="${sources[i]}" alt="immagine-${i}">`
-
-
+    thumbnails.innerHTML += `<img class="scale" src="${sources[i]}" alt="immagine-${i}">`
 
 }
 
+// Prendo le classi item&scale dal css per attivare disattivare stili sulle immagini
+
 document.getElementsByClassName('item')[activeIndex].classList.add('active');
+
+document.getElementsByClassName('scale')[activeIndex].classList.add('scaleactive');
 
 
 // MILESTONE 3
 // Al click dell'utente sulle frecce, l'immagine attiva cambia e diventa visibile nello slider, prendendo il posto della precedente.
+// e sul thumbnail cambia il grayscale e si aggiunge una boxshadow
 
 // Aggiungo i bottoni 
 
@@ -71,6 +74,7 @@ console.log(prima, dopo)
 dopo.addEventListener('click', function () {
     //rimuovo la classe active
     document.querySelector(".active").classList.remove('active')
+    document.querySelector(".scaleactive").classList.remove('scaleactive')
 
     // incremento activindex 
     activeIndex++;
@@ -84,6 +88,7 @@ dopo.addEventListener('click', function () {
 
     // aggiungo la classe active
     document.getElementsByClassName('item')[activeIndex].classList.add('active');
+    document.getElementsByClassName('scale')[activeIndex].classList.add('scaleactive');
 })
 
 // BONUS 1:
@@ -95,7 +100,7 @@ dopo.addEventListener('click', function () {
 prima.addEventListener('click', function () {
     //rimuovo la classe active
     document.querySelector(".active").classList.remove('active')
-
+    document.querySelector(".scaleactive").classList.remove('scaleactive')
 
     // RIPARTO DA 0 quando arrivo in fondo alle immagini
     activeIndex--
@@ -106,6 +111,7 @@ prima.addEventListener('click', function () {
 
     // aggiungo la classe active
     document.getElementsByClassName('item')[activeIndex].classList.add('active');
+    document.getElementsByClassName('scale')[activeIndex].classList.add('scaleactive');
 })
 
 
